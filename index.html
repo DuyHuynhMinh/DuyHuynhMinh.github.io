@@ -86,7 +86,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Problem-Two-Sum"><a href="#Problem-Two-Sum" class="headerlink" title="Problem : Two Sum"></a><strong><em>Problem : Two Sum</em></strong></h3><h6 id="Link-https-leetcode-com-problems-two-sum"><a href="#Link-https-leetcode-com-problems-two-sum" class="headerlink" title="Link : https://leetcode.com/problems/two-sum/"></a>Link : <a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum/</a></h6><p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target. You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
+        <p><strong><em>Problem : Two Sum</em></strong></p>
+<h6 id="Link-https-leetcode-com-problems-two-sum"><a href="#Link-https-leetcode-com-problems-two-sum" class="headerlink" title="Link : https://leetcode.com/problems/two-sum/"></a>Link : <a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum/</a></h6><ul>
+<li>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target. You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</li>
+</ul>
 <h6 id="Example"><a href="#Example" class="headerlink" title="Example:"></a><strong>Example:</strong></h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums &#x3D; [2, 7, 11, 15], target &#x3D; 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure>
 
 <h6 id="Hint-HashMap"><a href="#Hint-HashMap" class="headerlink" title="Hint :  HashMap"></a>Hint :  HashMap</h6><h6 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;        </span><br><span class="line">        <span class="keyword">int</span> len  = nums.length;        </span><br><span class="line">        HashMap&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> []ans =&#123;-<span class="number">1</span>,-<span class="number">1</span>&#125;;        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span> ; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target-nums[i])) &#123;</span><br><span class="line">                ans[<span class="number">0</span>] = i;</span><br><span class="line">                ans[<span class="number">1</span>] = map.get(target-nums[i]);</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(nums[i],i);            </span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -97,79 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Leetcode/" data-id="ck9dxyoa80004h4v77w6t4po9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Machine-Learning" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/24/Machine-Learning/" class="article-date">
-  <time datetime="2020-04-24T07:20:45.000Z" itemprop="datePublished">2020-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/24/Machine-Learning/">Machine Learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Machine-Learning/" data-id="ck9dxyoa90005h4v72bn098yn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Deep-Learning" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/24/Deep-Learning/" class="article-date">
-  <time datetime="2020-04-24T07:20:02.000Z" itemprop="datePublished">2020-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/24/Deep-Learning/">Deep Learning</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Deep-Learning/" data-id="ck9dxyoa30002h4v7fcg5c75w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Leetcode/" data-id="ck9e2zuzo00033sv7en5mfkxl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/DataStructure-Algorithms/" data-id="ck9dxyoa00001h4v7gf4o9ezk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/DataStructure-Algorithms/" data-id="ck9e2zuzk00013sv7ht4re3ba" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Math/" data-id="ck9dxyoab0006h4v7d5gjcku3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Math/" data-id="ck9e2zuzp00043sv76coy4q4s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/C/" data-id="ck9dxyo9n0000h4v75lhr71uk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/C/" data-id="ck9e2zuzc00003sv791ala5pd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Python/" data-id="ck9dxyoac0007h4v74s8e9rps" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Python/" data-id="ck9e2zuzq00053sv7b4cyhjyj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9dxyoa50003h4v7bbrp9hgf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9e2zuzm00023sv7775o1bwg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,19 +326,19 @@
           </li>
         
           <li>
-            <a href="/2020/04/24/Machine-Learning/">Machine Learning</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/24/Deep-Learning/">Deep Learning</a>
-          </li>
-        
-          <li>
             <a href="/2020/04/24/DataStructure-Algorithms/">DataStructure Algorithms</a>
           </li>
         
           <li>
             <a href="/2020/04/24/Math/">Math</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/24/C/">C++</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/24/Python/">Python</a>
           </li>
         
       </ul>
