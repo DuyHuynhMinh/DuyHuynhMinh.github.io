@@ -7,13 +7,15 @@
   
   <title>Java | Takenote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="Primitive data types  :   Type Description Set of Values    byte 8-bit signed two’s complement integer [-128 , 127]   short 16-bit signed two’s complement integer [-32768, 32767]   char 16-bit Unicode">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Java">
 <meta property="og:url" content="http://yoursite.com/2020/04/24/Java/index.html">
 <meta property="og:site_name" content="Takenote">
+<meta property="og:description" content="Primitive data types  :   Type Description Set of Values    byte 8-bit signed two’s complement integer [-128 , 127]   short 16-bit signed two’s complement integer [-32768, 32767]   char 16-bit Unicode">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-24T06:50:49.000Z">
-<meta property="article:modified_time" content="2020-04-24T06:50:49.336Z">
+<meta property="article:modified_time" content="2020-04-24T14:10:09.613Z">
 <meta property="article:author" content="Duy Huynh">
 <meta name="twitter:card" content="summary">
   
@@ -86,11 +88,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="Primitive-data-types"><a href="#Primitive-data-types" class="headerlink" title="Primitive data types  :"></a>Primitive data types  :</h4><table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Description</th>
+<th align="center">Set of Values</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">8-bit signed two’s complement integer</td>
+<td align="center">[-128 , 127]</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">16-bit signed two’s complement integer</td>
+<td align="center">[-32768, 32767]</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">16-bit Unicode character</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">32-bit signed two’s complement integer</td>
+<td align="center">[-2147483648, 2147483647]</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">64-bit signed two’s complement integer</td>
+<td align="center">[-9223372036854775808,<br/>9223372036854775807]</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">32-bit floating-point number (IEEE 754-1985)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">64-bit floating-point number (IEEE 754-1985)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">a boolean value</td>
+<td align="center">true or fasle</td>
+</tr>
+</tbody></table>
+<p>Note : We can use ‘object data type’.MIN_VALUE and ‘object data type’.MAX_VALUE to check range of primative data type. For example : Integer.MIN_VALUE and Integer.MAX_VALUE</p>
+<h4 id="Class-and-Object"><a href="#Class-and-Object" class="headerlink" title="Class and Object :"></a>Class and Object :</h4><ul>
+<li><p>A class is a blueprint for an object.  It is used to construct an object.</p>
+</li>
+<li><p>A class may have many objects.</p>
+</li>
+<li><p>An object have instance variables (state, fields) and methods (behavior).</p>
+</li>
+<li><p>An object is created by <em>new</em> keywork.</p>
+<p><em>For example</em> : </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder(); (sb also known as reference type)</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h4 id="Sort-Library"><a href="#Sort-Library" class="headerlink" title="Sort Library"></a>Sort Library</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(nums); (non-decrease order, nums : array, object data, list)</span><br><span class="line">Arrays.sort(nums,Collections.reverseOrder()); (non_increase order, nums must object data) </span><br><span class="line">or</span><br><span class="line">Arrays.sort(nums, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">          <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9e2zuzm00023sv7775o1bwg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9ecdvh10002p8v78o3z7w3q" class="article-share-link">Share</a>
       
       
     </footer>
