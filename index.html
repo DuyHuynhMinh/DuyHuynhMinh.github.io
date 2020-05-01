@@ -171,10 +171,24 @@
 <h6 id="-1"><a href="#-1" class="headerlink" title=""></a></h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;        </span><br><span class="line">        List&lt;Integer&gt; ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len;++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> idx =Math.abs(nums[i])-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[idx]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">               nums[idx]*=-<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;<span class="number">0</span>) &#123;</span><br><span class="line">                ans.add(i+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+
+<p><strong><em>Problem : Find Peak Element</em></strong></p>
+<h6 id="Link-https-leetcode-com-problems-find-peak-element"><a href="#Link-https-leetcode-com-problems-find-peak-element" class="headerlink" title="Link :https://leetcode.com/problems/find-peak-element/"></a>Link :<a href="https://leetcode.com/problems/find-peak-element/" target="_blank" rel="noopener">https://leetcode.com/problems/find-peak-element/</a></h6><p>A peak element is an element that is greater than its neighbors.</p>
+<p>Given an input array <code>nums</code>, where <code>nums[i] ≠ nums[i+1]</code>, find a peak element and return its index.</p>
+<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
+<p>You may imagine that <code>nums[-1] = nums[n] = -∞</code>.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [1,2,3,1]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: 3 is a peak element and your function should return the index number 2.</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findPeakElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.length;</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> r = len-<span class="number">1</span>;        </span><br><span class="line">        <span class="keyword">while</span> (l&lt;r) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l+(r-l)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]&lt;nums[mid+<span class="number">1</span>]) &#123;</span><br><span class="line">                l = mid +<span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                r = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> l;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Leetcode/" data-id="ck9lgcy9u0003vcv76gz78jwd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Leetcode/" data-id="ck9nh4riw0001y8v79xv6bxp4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/DataStructure-Algorithms/" data-id="ck9lgcy9p0001vcv7efqd25v7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/DataStructure-Algorithms/" data-id="ck9nh4riz0002y8v751526e51" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Math/" data-id="ck9lgcy9w0004vcv7hwy3gpc0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Math/" data-id="ck9nh4rj00003y8v7hquo801a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -354,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/C/" data-id="ck9lgcy9h0000vcv79a5s3fr9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/C/" data-id="ck9nh4ril0000y8v7f5iuetre" class="article-share-link">Share</a>
       
       
     </footer>
@@ -521,7 +535,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Python/" data-id="ck9lgcy9x0005vcv7ha58drp5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Python/" data-id="ck9nh4rj40005y8v76jsefpa5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -630,7 +644,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9lgcy9s0002vcv7cg320l5c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/24/Java/" data-id="ck9nh4rj20004y8v7hwlodoyp" class="article-share-link">Share</a>
       
       
     </footer>
